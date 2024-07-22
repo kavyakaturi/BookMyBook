@@ -1,0 +1,13 @@
+
+<div *ngIf="users$ | async as users; else loading" class="container mx-auto">
+    <h2 class="text-2xl font-bold mb-4">User List</h2>
+    <ul>
+        <li *ngFor="let user of users" class="mb-4">
+            <div class="flex items-center">
+                <input type="text" [(ngModel)]="user.name" placeholder="Enter new name" class="border border-gray-400 rounded px-4 py-2 mr-4 focus:outline-none focus:border-blue-500 flex-grow">
+                <button (click)="updateUserName(user, user.name)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>
+            </div>
+        </li>
+    </ul>
+</div>
+<ng-template #loading class="container mx-auto">Loading...</ng-template>

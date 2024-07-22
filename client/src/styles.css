@@ -1,0 +1,15 @@
+/* src/styles.css */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/variants';
+
+
+.disabled{
+    opacity:0.6;
+    cursor:not-allowed;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
